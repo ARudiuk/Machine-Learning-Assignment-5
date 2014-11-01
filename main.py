@@ -60,10 +60,10 @@ for i in range(word_count):
             word_sum_class_1+=split_TRAIN_DATA[j,i]
         else:
             word_sum_class_2+=split_TRAIN_DATA[j,i]
-    prob_word[i,0]=float(word_sum_class_1+.1)/float(word_count_class_1)
-    prob_word[i,1]=float(word_sum_class_2+.1)/float(word_count_class_2)
+    prob_word[i,0]=float(word_sum_class_1+1)/float(word_count_class_1+word_count)
+    prob_word[i,1]=float(word_sum_class_2+1)/float(word_count_class_2+word_count)
 np.savetxt('word_probability.txt',prob_word)
-prob_word = np.loadtxt('word_probability.txt')
+# prob_word = np.loadtxt('word_probability.txt')
 print "Shape of P(x|C) matrix is",np.shape(prob_word)
 prob_class_1 = float(word_count_class_1)/float(word_count_class_1+word_count_class_2)
 print prob_class_1
