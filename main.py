@@ -27,12 +27,12 @@ for i in range(np.shape(TEST_DATA)[0]):
 #get number of words in each class
 word_count_class_1 = 0
 word_count_class_2 = 0
-for i in range(np.shape(TRAIN_DATA)[0]):
+for i in range(np.shape(TEST_DATA)[0]):
     #-1 because of index starting at 0 not 1 like documen id does
-    if TRAIN_LABEL[TRAIN_DATA[i][0]-1][0] == 1:
-        word_count_class_1+=TRAIN_DATA[i][2]
+    if TEST_LABEL[TEST_DATA[i][0]-1][0] == 1:
+        word_count_class_1+=TEST_DATA[i][2]
     else:
-        word_count_class_2+=TRAIN_DATA[i][2]
+        word_count_class_2+=TEST_DATA[i][2]
 print "There are",np.shape(TRAIN_LABEL)[0],"unique documents"
 print "There are",word_count,"unique words"
 print "There are",word_count_class_1,"words in the first class"
@@ -55,7 +55,7 @@ prob_word = np.zeros((word_count,2))
 for i in range(word_count):
     word_sum_class_1 = 0
     word_sum_class_2 = 0
-    for j in range(np.shape(split_TRAIN_DATA)[0]):
+    for j in range(np.shape(split_TEST_DATA)[0]):
         if(TRAIN_LABEL[j,0]==1):
             word_sum_class_1+=split_TRAIN_DATA[j,i]
         else:
