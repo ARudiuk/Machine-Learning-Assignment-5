@@ -1,0 +1,13 @@
+There are 1061 unique documents in the train data
+There are 707 unique documents in the test data
+There are 16127 unique words in the train data
+There are 54778 unique words in the test data
+There are 148812 words in the first class for the train data
+There are 110358 words in the second class for the train data
+There are 98118 words in the first class for the test data
+There are 108714 words in the second class for the test data
+Shape of P(x|C) matrix is (54778L, 2L) 
+The probability of a word being class one is 0.574186827179 in the training data set
+The probability of a word being class two is 0.425813172821 in the training data set
+The probability of a word being class one is 0.474385008123 in the test data set
+The probability of a word being class two is 0.525614991877 in the test data set
