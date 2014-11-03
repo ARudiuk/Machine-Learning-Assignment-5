@@ -16,8 +16,8 @@ split_TRAIN_DATA = np.load("split_TRAIN_DATA.npy")
 #calculate accuracy on train set
 train_correct = 0
 for i in range(np.shape(split_TRAIN_DATA)[0]):
-    prob_given_x_c1 = 1
-    prob_given_x_c2 = 1
+    prob_given_x_c1 = 0
+    prob_given_x_c2 = 0
     prob_given_x_c1 += math.log(prob_class_1)
     prob_given_x_c2 += math.log(prob_class_2)
     for j in range(np.shape(split_TRAIN_DATA)[1]):
@@ -34,8 +34,8 @@ print "Percentage correct was", float(train_correct)/float(np.shape(TRAIN_LABEL)
 
 test_correct = 0
 for i in range(np.shape(split_TEST_DATA)[0]):
-    prob_given_x_c1 = 1
-    prob_given_x_c2 = 1
+    prob_given_x_c1 = 0
+    prob_given_x_c2 = 0
     prob_given_x_c1 += math.log(prob_class_1)
     prob_given_x_c2 += math.log(prob_class_2)
     for j in range(np.shape(split_TEST_DATA)[1]):
